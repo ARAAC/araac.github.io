@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <script defer src="{{ "/assets/js/main.js" | relative_url }}"></script>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body>
+    <header>
+      <img src="{{ "/assets/images/araac_logo.svg" | relative_url }}" alt="ARAAC Logo">
+      <h1>Australian Responsible Autonomous Agents Collective</h1>
+    </header>
+    {{ content }}
+    <footer>
+
+      <div class="institutions">
+        <h4>ARAAC is supported by members from:</h4>
+        <div class="logos">
+            <a href="https://federation.edu.au"><img
+                src="{{ "/assets/images/federation.png" | relative_url }}" alt="Federation University Australia"></a>
+            <a href="https://www.deakin.edu.au"><img
+                src="{{ "/assets/images/deakin.png" | relative_url }}" alt="Deakin University"></a>
+            <a href="https://www.unsw.edu.au"><img
+                src="{{ "/assets/images/unsw.png" | relative_url }}" alt="University of NSW"></a>
+        </div>
+    </div>
+    
+    </footer>
+  </body>
+</html>

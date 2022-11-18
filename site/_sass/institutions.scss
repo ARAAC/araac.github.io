@@ -1,0 +1,38 @@
+.institutions {
+    background-color: var(--background-color-softer); 
+    margin: 0;
+    padding: 3rem 6rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border-color);
+
+    h4 {
+        color: var(--text-color-softer);
+        font-size: 1.6rem;
+        line-height: 1;
+        text-align: center;
+        
+    }
+    
+    .logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center
+        }
+    
+    
+    .logos img {
+        max-height: 10ch;
+        max-width: 100%;
+    }
+    
+    @media (min-width: 700px) {
+        .logos {        
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            gap: 6rem;
+            grid-template-columns: auto auto auto;
+        }
+    }
+}

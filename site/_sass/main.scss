@@ -1,0 +1,33 @@
+html {
+  --theme-hue: 0;
+  --accent-hue: 30;
+  --base-font-size: 12px;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto auto 1fr auto;
+
+  > main {
+    margin: 0;
+    padding: 0rem 6rem;
+
+    h1 {
+      font-size: 3.0rem;
+      line-height: 4rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+}
+
+.section-split {
+  margin-top: 6rem;
+  font-size: 2rem;
+  border-bottom: 1px solid var(--text-color-softer);
+  color: var(--text-color-softer);
+}

@@ -1,0 +1,107 @@
+.researchers, .researchers-highlight {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:  wrap;
+    gap: 1rem;
+
+    .researcher {
+        flex-grow: 1;   
+    
+        /*display: grid;
+        grid-template-columns: [start] auto [content] 1fr [end];
+        grid-template-rows: [start] auto auto 1fr [end]; */
+    
+        img {
+            float: left;
+            width: 10rem;
+            border: 1px solid var(--accent-color);
+            border-radius: 1rem;
+    
+            margin: 0 1rem 1rem 0;
+            /* grid-column: start/content;
+            grid-row: start/end;    */
+        }
+    
+        
+    
+        h2 {
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+    
+        .researcher-title {
+            color: var(--text-color-softer);
+            letter-spacing: 0;
+        }
+    
+        .researcher-title-long {
+            color: var(--text-color-softer);
+            font-size: 1.5rem;
+            display: block;
+            letter-spacing: 0;
+        }
+    
+        p.researcher-org {
+            color: var(--text-color-softer);
+            margin-bottom: 0.5rem;
+        }
+    
+        p {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.researchers .researcher {
+    flex-basis: calc(30% - 2rem);
+}
+
+.researchers-highlight .researcher {
+    flex-basis: calc(50% - 2rem);
+}
+
+
+
+.researcher-full {
+    display: flex;
+
+    margin: 6rem;
+
+    .researcher-media {
+        margin: 0 0 0 1rem;
+    }
+
+    img {
+        width: 20rem;
+        margin: 0 2rem 1rem 0;
+
+        border: 1px solid var(--accent-color);
+        border-radius: 1rem;
+    }    
+
+    h2 {
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+
+    .researcher-title {
+        color: var(--text-color-softer);
+        letter-spacing: 0;
+    }
+
+    .researcher-title-long {
+        color: var(--text-color-softer);
+        font-size: 1.5rem;
+        display: block;
+        letter-spacing: 0;
+    }
+
+    p.researcher-org {
+        color: var(--text-color-softer);
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,32 @@
+header {
+    background-color: var(--background-color-softer);
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 3rem 6rem;
+
+    border-bottom: 1px solid var(--border-color);
+
+    img {
+        display: block;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+
+    @media (min-width: 700px) {
+        h1 {
+            font-size: 3rem;
+            white-space: nowrap;
+        }
+    }
+}
+
+
+

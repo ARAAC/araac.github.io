@@ -1,0 +1,34 @@
+<h4 class="section-split">Research Leaders</h4>
+<div class="researchers-highlight">
+    {% assign sorted = site.researchers | where: "order", 0 %}
+    {% for researcher in sorted %}
+        <div class="researcher">
+            {% assign name = researcher.path | split: "/" | last | split: "." | first %}
+            {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
+            <img src='{{ img | relative_url }}'>
+            <h2>
+                <span class="researcher-title-long">{{ researcher.rank}}</span>
+                {{ researcher.name }}</h2>
+            <p class="researcher-org">{{ researcher.org }}</p>
+            <p class="researcher-bio">{{ researcher.short | markdownify }}</p>
+            <p><a href="{{ researcher.url }}">More</a></p>
+        </div>
+    {% endfor %}
+</div>
+<h4 class="section-split">Researchers</h4>
+<div class="researchers">
+    {% assign sorted = site.researchers | where: "order", 1 %}
+    {% for researcher in sorted %}
+        <div class="researcher">
+            {% assign name = researcher.path | split: "/" | last | split: "." | first %}
+            {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
+            <img src='{{ img | relative_url }}'>
+            <h2>
+                <span class="researcher-title">{{ researcher.rank}}</span>
+                {{ researcher.name }}</h2>
+            <p class="researcher-org">{{ researcher.org }}</p>
+            <p class="researcher-bio">{{ researcher.short | markdownify }}</p>
+            <p><a href="{{ researcher.url }}">More</a></p>
+        </div>
+    {% endfor %}
+</div>

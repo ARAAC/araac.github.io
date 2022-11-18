@@ -1,0 +1,20 @@
+---
+layout: framework
+---
+
+{% assign title = rank %}
+<div class="researcher-full">
+    {% assign name = page.url | split: "/" | last | split: "." | first %}
+    {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
+    <div class="researcher-media">
+        <img class="headshot" src='{{ img | relative_url }}'>
+        {% if page.profile %}<p><a href="{{ page.profile }}">Institution Profile</a></p>{% endif %}
+    </div>
+    <div class="researcher-content">
+        <h2>
+            <span class="researcher-title">{{ page.rank}}</span>
+            {{ page.name }}</h2>
+        <p class="researcher-org">{{ page.org }}</p>
+        <p class="researcher-bio">{{ content }}</p>
+    </div>
+</div>
