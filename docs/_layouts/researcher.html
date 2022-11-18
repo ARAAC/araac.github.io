@@ -8,7 +8,7 @@ layout: framework
     {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
     <div class="researcher-media">
         <img class="headshot" src='{{ img | relative_url }}'>
-        {% if page.profile %}<p><a href="{{ page.profile }}">Institution Profile</a></p>{% endif %}
+        {% if page.profile %}<p><a href="{{ page.profile | relative_url }}">Institution Profile</a></p>{% endif %}
     </div>
     <div class="researcher-content">
         <h2>
