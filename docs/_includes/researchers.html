@@ -10,7 +10,7 @@
                 <span class="researcher-title-long">{{ researcher.rank}}</span>
                 {{ researcher.name }}</h2>
             <p class="researcher-org">{{ researcher.org }}</p>
-            <p class="researcher-bio">{{ researcher.short | markdownify }}</p>
+            <div class="researcher-bio">{{ researcher.short | markdownify }}</div>
             <p><a href="{{ researcher.url | relative_url }}">More</a></p>
         </div>
     {% endfor %}
@@ -27,7 +27,7 @@
                 <span class="researcher-title">{{ researcher.rank}}</span>
                 {{ researcher.name }}</h2>
             <p class="researcher-org">{{ researcher.org }}</p>
-            <p class="researcher-bio">{{ researcher.short | markdownify }}</p>
+            <div class="researcher-bio">{{ researcher.short | markdownify }}</div>
             <p><a href="{{ researcher.url | relative_url }}">More</a></p>
         </div>
     {% endfor %}
