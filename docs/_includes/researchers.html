@@ -10,8 +10,9 @@
                 <span class="researcher-title-long">{{ researcher.rank}}</span>
                 {{ researcher.name }}</h2>
             <p class="researcher-org">{{ researcher.org }}</p>
-            <div class="researcher-bio">{{ researcher.short | markdownify }}</div>
-            <p><a href="{{ researcher.url | relative_url }}">More</a></p>
+            <div class="researcher-bio">{{ researcher.short | markdownify }}
+                <p><a href="{{ researcher.url | relative_url }}">Researcher profile - {{ researcher.name }}</a></p>
+            </div>
         </div>
     {% endfor %}
 </div>
