@@ -1,5 +1,5 @@
 ---
-rank: Associate Professor
+rank: Professor
 name: Peter Vamplew
 org: Federation University Australia
 type: staff

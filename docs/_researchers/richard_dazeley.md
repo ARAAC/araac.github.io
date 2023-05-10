@@ -1,5 +1,5 @@
 ---
-rank: Associate Professor
+rank: Professor
 name: Richard Dazeley
 org: Deakin University
 type: staff
