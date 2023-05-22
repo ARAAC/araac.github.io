@@ -2,7 +2,7 @@
 layout: framework
 ---
 
-{% assign title = rank %}
+{% assign page.title = page.name %}
 <div class="researcher-full">
     {% assign name = page.url | split: "/" | last | split: "." | first %}
     {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
