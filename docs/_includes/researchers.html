@@ -35,3 +35,22 @@
         </div>
     {% endfor %}
 </div>
+<h4 class="section-split">Students</h4>
+<div class="students">
+    {% assign sorted = site.researchers | where: "order", 1 %}
+    {% for researcher in sorted %}
+        <div class="researcher">
+            {% assign name = researcher.path | split: "/" | last | split: "." | first %}
+            {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
+            <img src='{{ img | relative_url }}'>
+            <h2>
+                <span class="researcher-title">{{ researcher.rank}}</span>
+                {{ researcher.name }}</h2>
+            <p class="researcher-org">{{ researcher.org }}</p>
+            <div class="researcher-bio">{{ researcher.short | markdownify }}
+                <p><a href="{{ researcher.url | relative_url }}">Researcher profile - {{ researcher.name }}</a></p>
+            </div>
+            
+        </div>
+    {% endfor %}
+</div>
