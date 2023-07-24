@@ -36,8 +36,8 @@
     {% endfor %}
 </div>
 <h4 class="section-split">Students</h4>
-<div class="students">
-    {% assign sorted = site.researchers | where: "order", 1 %}
+<div class="researchers">
+    {% assign sorted = site.students | where: "order", 1 %}
     {% for researcher in sorted %}
         <div class="researcher">
             {% assign name = researcher.path | split: "/" | last | split: "." | first %}
