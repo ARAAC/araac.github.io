@@ -1,5 +1,5 @@
 ---
-rank: 
+rank: 1
 name: Alex England
 org: Deakin University
 type: student
