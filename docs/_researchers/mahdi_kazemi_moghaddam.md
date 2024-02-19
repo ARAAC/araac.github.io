@@ -2,7 +2,7 @@
 rank: Dr
 name: Mahdi Kazemi Moghaddam
 org: Deakin University
-type: staff
+type: visitor
 layout: researcher
 profile: https://www.deakin.edu.au/about-deakin/people/mahdi-kazemi-moghaddam
 order: 1
