@@ -1,17 +1,23 @@
 header {
     background-color: var(--background-color-softer);
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
     margin: 0;
-    padding: 3rem 6rem;
+    padding: 2rem 1.5rem;
 
     border-bottom: 1px solid var(--border-color);
+
+    .header-home {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        text-decoration: none;
+        color: var(--text-color-normal);
+    }
 
     img {
         display: block;
     }
-    
+
     h1 {
         font-size: 2rem;
         font-weight: bold;
@@ -21,9 +27,10 @@ header {
     }
 
     @media (min-width: 700px) {
+        padding: 3rem 6rem;
+
         h1 {
             font-size: 3rem;
-            white-space: nowrap;
         }
     }
 }

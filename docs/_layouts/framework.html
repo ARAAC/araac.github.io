@@ -4,13 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script defer src="{{ "/assets/js/main.js" | relative_url }}"></script>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
   <body>
     <header>
-      <img src="{{ "/assets/images/araac_logo.svg" | relative_url }}" alt="ARAAC Logo">
-      <h1>Australian Responsible Autonomous Agents Collective</h1>
+      <a class="header-home" href="{{ "/" | relative_url }}">
+        <img src="{{ "/assets/images/araac_logo.svg" | relative_url }}" alt="ARAAC Logo">
+        <h1>Australian Responsible Autonomous Agents Collective</h1>
+      </a>
     </header>
     {{ content }}
     <footer>

@@ -1,75 +1,108 @@
+/* Card grids */
 .researchers, .researchers-highlight {
-    display: flex;
-    flex-direction: row;
-    flex-wrap:  wrap;
-    gap: 1rem;
+    display: grid;
+    gap: 2.5rem 2rem;
+    align-items: start;
+    grid-template-columns: 1fr;
 
     .researcher {
-        flex-grow: 1;   
-    
-        /*display: grid;
-        grid-template-columns: [start] auto [content] 1fr [end];
-        grid-template-rows: [start] auto auto 1fr [end]; */
-    
+
         img {
             float: left;
             width: 10rem;
             border: 1px solid var(--accent-color);
             border-radius: 1rem;
-    
+
             margin: 0 1rem 1rem 0;
-            /* grid-column: start/content;
-            grid-row: start/end;    */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-    
-        
-    
+
+        &:hover img {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
         h2 {
             line-height: 1;
             margin-bottom: 0.5rem;
         }
 
         .researcher-bio {
-            margin-left: 11rem;
+            /* No left margin and no new block-formatting context, so the
+               bio text wraps beside the floated photo and then flows under
+               it, instead of staying indented and leaving a blank column. */
         }
-    
+
         .researcher-title {
             color: var(--text-color-softer);
             letter-spacing: 0;
         }
-    
+
         .researcher-title-long {
             color: var(--text-color-softer);
             font-size: 1.5rem;
             display: block;
             letter-spacing: 0;
         }
-    
+
         p.researcher-org {
             color: var(--text-color-softer);
             margin-bottom: 0.5rem;
         }
-    
+
         p {
             margin-bottom: 0.5rem;
         }
     }
 }
 
-.researchers .researcher {
-    flex-basis: calc(30% - 2rem);
+/* Regular researchers: up to 3 columns. Highlighted leaders: up to 2. */
+@media (min-width: 680px) {
+    .researchers, .researchers-highlight {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.researchers-highlight .researcher {
-    flex-basis: calc(50% - 2rem);
+/* On wider screens, more researchers fit */
+@media (min-width: 1000px) {
+    .researchers {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
+/* "View profile" link: clean affordance with an arrow that nudges on hover. */
+.researcher-link {
+    a {
+        text-decoration: none;
+        font-weight: 600;
 
+        span {
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+
+        &:hover span {
+            transform: translateX(3px);
+        }
+    }
+}
+
+.researcher-back {
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
 
 .researcher-full {
     display: flex;
+    flex-wrap: wrap;
 
-    margin: 6rem;
+    margin: 2rem 1.5rem;
+
+    @media (min-width: 700px) {
+        margin: 6rem;
+    }
 
     .researcher-media {
         margin: 0 0 0 1rem;
@@ -81,7 +114,7 @@
 
         border: 1px solid var(--accent-color);
         border-radius: 1rem;
-    }    
+    }
 
     h2 {
         line-height: 1;
