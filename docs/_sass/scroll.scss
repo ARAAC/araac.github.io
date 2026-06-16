@@ -1,8 +1,20 @@
+@keyframes hero-parallax {
+    to { background-position: 0% -30vh; }
+}
+
 .scroll-box {
 
     background-size: cover;
     background-repeat: repeat-y;
-    background-position: var(--scroll);
+    background-position: 0% 0%;
+
+    // Parallax driven entirely by scroll position (replaces scroll.js).
+    // 30vh of drift over 100vh of scroll == 0.3x scroll rate.
+    @supports (animation-timeline: scroll()) {
+        animation: hero-parallax linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 100vh;
+    }
 
     h2 {
         font-size: 3rem;

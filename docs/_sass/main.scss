@@ -20,6 +20,7 @@ body {
     h1 {
       font-size: 3.0rem;
       line-height: 4rem;
+      margin-top: 4rem;
     }
 
     h2 {
@@ -63,6 +64,7 @@ button:focus-visible,
   *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
+    animation-timeline: none !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
