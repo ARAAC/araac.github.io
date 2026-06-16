@@ -4,9 +4,10 @@ layout: framework
 <div class="scroll-box hero-box-hands">
 <p class="back"><a href="{{ "/" | relative_url }}#projects">All projects</a></p>
 </div>
-<div class="project-full">
+<main>
     <h1>{{ page.title }}</h1>
-    <div class="project-bio">{{ content }}</div>
+    
+    {{ content }}
 
     {% assign team = site.researchers | where_exp: "r", "r.projects contains page.slug" %}
     {% if team.size > 0 %}
@@ -32,7 +33,8 @@ layout: framework
     {% endif %}
 
     {% include publications.html project=page.slug %}
-</div>
+</main>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
