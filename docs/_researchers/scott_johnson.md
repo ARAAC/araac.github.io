@@ -1,6 +1,6 @@
 ---
 rank: 
-name: Scott Johnson
+title: Scott Johnson
 org: Deakin University
 type: student
 profile: 

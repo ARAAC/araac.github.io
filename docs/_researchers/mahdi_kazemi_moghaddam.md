@@ -1,6 +1,6 @@
 ---
 rank: Dr
-name: Mahdi Kazemi Moghaddam
+title: Mahdi Kazemi Moghaddam
 org: Deakin University
 type: visitor
 profile: https://mahdi-kazemi-m.github.io/

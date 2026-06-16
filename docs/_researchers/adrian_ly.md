@@ -1,6 +1,6 @@
 ---
 rank: 
-name: Adrian Ly
+title: Adrian Ly
 org: Deakin University
 type: student
 profile: 

@@ -3,7 +3,19 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
+    {% seo %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": {{ '/' | absolute_url | append: '#organization' | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "alternateName": {{ site.tagline | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }},
+      "logo": {{ '/assets/images/araac_logo.svg' | absolute_url | jsonify }},
+      "description": {{ site.description | strip_newlines | strip | jsonify }}
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">

@@ -1,6 +1,6 @@
 ---
 rank: Associate Professor
-name: Cameron Foale
+title: Cameron Foale
 org: Federation University Australia
 type: staff
 profile: https://federation.edu.au/research/find-an-expert/cameron-foale

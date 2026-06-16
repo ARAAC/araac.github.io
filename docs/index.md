@@ -1,6 +1,6 @@
 ---
 layout: front
-title: "ARAAC - Australian Responsible Autonomous Agents Collective"
+title: ARAAC
 ---
 
 # Australia's leading cross-institutional responsible AI collective, envisioning the future of human-agent interaction

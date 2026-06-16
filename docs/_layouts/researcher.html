@@ -2,7 +2,6 @@
 layout: framework
 ---
 
-{% assign page.title = page.name %}
 <div class="scroll-box hero-box-hands">
 <p class="back"><a href="{{ "/" | relative_url }}#researchers">All researchers</a></p>
 </div>
@@ -10,12 +9,12 @@ layout: framework
     {% assign name = page.url | split: "/" | last | split: "." | first %}
     {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
     <div class="researcher-media">
-        <img class="headshot" src='{{ img | relative_url }}' alt='{{ page.name }}'>
+        <img class="headshot" src='{{ img | relative_url }}' alt='{{ page.title }}'>
     </div>
     <div class="researcher-content">
         <h2>
             <span class="researcher-title">{{ page.rank}}</span>
-            {{ page.name }}</h2>
+            {{ page.title }}</h2>
         <p class="researcher-org">{{ page.org }}</p>
         <div class="researcher-bio">{{ content }}</div>
         <p class="researcher-links">
@@ -25,3 +24,20 @@ layout: framework
         {% include publications.html author=page.slug %}
     </div>
 </div>
+{%- capture links_csv -%}{% if page.profile %}{{ page.profile }}{% endif %}{% if page.personal %}{% if page.profile %},{% endif %}{{ page.personal }}{% endif %}{%- endcapture -%}
+{%- assign person_links = links_csv | split: ',' -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": {{ page.url | absolute_url | append: '#person' | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  {% if page.rank %}"jobTitle": {{ page.rank | jsonify }},{% endif %}
+  {% if page.short %}"description": {{ page.short | strip_newlines | strip | jsonify }},{% endif %}
+  {% if page.org %}"affiliation": { "@type": "Organization", "name": {{ page.org | jsonify }} },{% endif %}
+  "memberOf": { "@id": {{ '/' | absolute_url | append: '#organization' | jsonify }} },
+  "image": {{ img | absolute_url | jsonify }},
+  "name": {{ page.title | jsonify }}{% if links_csv != "" %},
+  "sameAs": {{ person_links | jsonify }}{% endif %}
+}
+</script>

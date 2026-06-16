@@ -1,6 +1,6 @@
 ---
 rank: 
-name: Nikolaj Goodger
+title: Nikolaj Goodger
 org: Federation University Australia
 type: student
 order: 2

@@ -1,6 +1,6 @@
 ---
 rank: 
-name: Alex England
+title: Alex England
 org: Deakin University
 type: student
 profile: 

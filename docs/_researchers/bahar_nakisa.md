@@ -1,6 +1,6 @@
 ---
 rank: Dr
-name: Bahar Nakisa
+title: Bahar Nakisa
 org: Deakin University
 type: staff
 profile: https://experts.deakin.edu.au/51664-bahareh-nakisa

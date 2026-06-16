@@ -1,6 +1,6 @@
 ---
 rank: Dr
-name: Francisco Cruz
+title: Francisco Cruz
 org: UNSW
 type: staff
 profile: https://research.unsw.edu.au/people/dr-francisco-cruz-naranjo

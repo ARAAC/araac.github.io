@@ -1,6 +1,6 @@
 ---
 rank: 
-name: Ethan Watkins (EJ)
+title: Ethan Watkins (EJ)
 org: ARAAC
 type: visitor
 profile: 

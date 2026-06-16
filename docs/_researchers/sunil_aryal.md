@@ -1,6 +1,6 @@
 ---
 rank: Associate Professor
-name: Sunil Aryal
+title: Sunil Aryal
 org: Deakin University
 type: staff
 profile: https://experts.deakin.edu.au/46689-sunil-aryal

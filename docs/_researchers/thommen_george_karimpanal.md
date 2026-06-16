@@ -1,6 +1,6 @@
 ---
 rank: Dr
-name: Thommen George Karimpanal
+title: Thommen George Karimpanal
 org: Deakin University
 type: staff
 profile: https://experts.deakin.edu.au/49747-thommen-george-karimpanal

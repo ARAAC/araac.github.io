@@ -6,12 +6,12 @@
         <div class="researcher">
             {% assign name = researcher.path | split: "/" | last | split: "." | first %}
             {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
-            <img src='{{ img | relative_url }}' alt='{{ researcher.name }}' loading='lazy'>
+            <img src='{{ img | relative_url }}' alt='{{ researcher.title }}' loading='lazy'>
             {% assign titleclass = "researcher-title" %}
             {% if researcher.rank == "Professor" or researcher.rank == "Associate Professor" %}{% assign titleclass = "researcher-title-long" %}{% endif %}
             <h2>
                 <span class="{{ titleclass }}">{{ researcher.rank}}</span>
-                <a href="{{ researcher.url | relative_url }}">{{ researcher.name }}</a></h2>
+                <a href="{{ researcher.url | relative_url }}">{{ researcher.title }}</a></h2>
             <p class="researcher-org">{{ researcher.org }}</p>
             <div class="researcher-bio">{{ researcher.short | markdownify }}
                 <p class="researcher-link"><a href="{{ researcher.url | relative_url }}">View profile<span aria-hidden="true"> &rarr;</span></a></p>
@@ -24,7 +24,7 @@
     {% assign filtered = site.researchers | where: "order", 1 %}
     {% assign sortlist = "" %}
     {% for r in filtered %}
-        {% assign surname = r.name | strip | split: " " | last %}
+        {% assign surname = r.title | strip | split: " " | last %}
         {% assign sortlist = sortlist | append: surname | append: "::" | append: forloop.index0 | append: "," %}
     {% endfor %}
     {% assign sortlist = sortlist | split: "," | sort_natural %}
@@ -34,12 +34,12 @@
         <div class="researcher">
             {% assign name = researcher.path | split: "/" | last | split: "." | first %}
             {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
-            <img src='{{ img | relative_url }}' alt='{{ researcher.name }}' loading='lazy'>
+            <img src='{{ img | relative_url }}' alt='{{ researcher.title }}' loading='lazy'>
             {% assign titleclass = "researcher-title" %}
             {% if researcher.rank == "Professor" or researcher.rank == "Associate Professor" %}{% assign titleclass = "researcher-title-long" %}{% endif %}
             <h2>
                 <span class="{{ titleclass }}">{{ researcher.rank}}</span>
-                <a href="{{ researcher.url | relative_url }}">{{ researcher.name }}</a></h2>
+                <a href="{{ researcher.url | relative_url }}">{{ researcher.title }}</a></h2>
             <p class="researcher-org">{{ researcher.org }}</p>
             <div class="researcher-bio">{{ researcher.short | markdownify }}
                 <p class="researcher-link"><a href="{{ researcher.url | relative_url }}">View profile<span aria-hidden="true"> &rarr;</span></a></p>
@@ -53,7 +53,7 @@
     {% assign filtered = site.researchers | where: "order", 2 %}
     {% assign sortlist = "" %}
     {% for r in filtered %}
-        {% assign surname = r.name | strip | split: " " | last %}
+        {% assign surname = r.title | strip | split: " " | last %}
         {% assign sortlist = sortlist | append: surname | append: "::" | append: forloop.index0 | append: "," %}
     {% endfor %}
     {% assign sortlist = sortlist | split: "," | sort_natural %}
@@ -63,12 +63,12 @@
         <div class="researcher">
             {% assign name = researcher.path | split: "/" | last | split: "." | first %}
             {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
-            <img src='{{ img | relative_url }}' alt='{{ researcher.name }}' loading='lazy'>
+            <img src='{{ img | relative_url }}' alt='{{ researcher.title }}' loading='lazy'>
             {% assign titleclass = "researcher-title" %}
             {% if researcher.rank == "Professor" or researcher.rank == "Associate Professor" %}{% assign titleclass = "researcher-title-long" %}{% endif %}
             <h2>
                 <span class="{{ titleclass }}">{{ researcher.rank}}</span>
-                {{ researcher.name }}</h2>
+                {{ researcher.title }}</h2>
             <p class="researcher-org">{{ researcher.org }}</p>
             <div class="researcher-bio">{{ researcher.short | markdownify }}
                 <p class="researcher-link"><a href="{{ researcher.url | relative_url }}">View profile<span aria-hidden="true"> &rarr;</span></a></p>
@@ -82,7 +82,7 @@
     {% assign filtered = site.researchers | where: "order", 3 %}
     {% assign sortlist = "" %}
     {% for r in filtered %}
-        {% assign surname = r.name | strip | split: " " | last %}
+        {% assign surname = r.title | strip | split: " " | last %}
         {% assign sortlist = sortlist | append: surname | append: "::" | append: forloop.index0 | append: "," %}
     {% endfor %}
     {% assign sortlist = sortlist | split: "," | sort_natural %}
@@ -92,12 +92,12 @@
         <div class="researcher">
             {% assign name = researcher.path | split: "/" | last | split: "." | first %}
             {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
-            <img src='{{ img | relative_url }}' alt='{{ researcher.name }}' loading='lazy'>
+            <img src='{{ img | relative_url }}' alt='{{ researcher.title }}' loading='lazy'>
             {% assign titleclass = "researcher-title" %}
             {% if researcher.rank == "Professor" or researcher.rank == "Associate Professor" %}{% assign titleclass = "researcher-title-long" %}{% endif %}
             <h2>
                 <span class="{{ titleclass }}">{{ researcher.rank}}</span>
-                {{ researcher.name }}</h2>
+                {{ researcher.title }}</h2>
             <p class="researcher-org">{{ researcher.org }}</p>
             <div class="researcher-bio">{{ researcher.short | markdownify }}
                 <p class="researcher-link"><a href="{{ researcher.url | relative_url }}">View profile<span aria-hidden="true"> &rarr;</span></a></p>
