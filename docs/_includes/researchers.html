@@ -10,7 +10,7 @@
             {% if researcher.rank == "Professor" or researcher.rank == "Associate Professor" %}{% assign titleclass = "researcher-title-long" %}{% endif %}
             <h2>
                 <span class="{{ titleclass }}">{{ researcher.rank}}</span>
-                {{ researcher.name }}</h2>
+                <a href="{{ researcher.url | relative_url }}">{{ researcher.name }}</a></h2>
             <p class="researcher-org">{{ researcher.org }}</p>
             <div class="researcher-bio">{{ researcher.short | markdownify }}
                 <p class="researcher-link"><a href="{{ researcher.url | relative_url }}">View profile<span aria-hidden="true"> &rarr;</span></a></p>
@@ -38,7 +38,7 @@
             {% if researcher.rank == "Professor" or researcher.rank == "Associate Professor" %}{% assign titleclass = "researcher-title-long" %}{% endif %}
             <h2>
                 <span class="{{ titleclass }}">{{ researcher.rank}}</span>
-                {{ researcher.name }}</h2>
+                <a href="{{ researcher.url | relative_url }}">{{ researcher.name }}</a></h2>
             <p class="researcher-org">{{ researcher.org }}</p>
             <div class="researcher-bio">{{ researcher.short | markdownify }}
                 <p class="researcher-link"><a href="{{ researcher.url | relative_url }}">View profile<span aria-hidden="true"> &rarr;</span></a></p>

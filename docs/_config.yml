@@ -16,3 +16,15 @@ collections:
     output: true
   publications:
     output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: researchers
+    values:
+      layout: researcher
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project

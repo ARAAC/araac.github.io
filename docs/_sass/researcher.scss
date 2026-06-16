@@ -57,7 +57,7 @@
 }
 
 /* Regular researchers: up to 3 columns. Highlighted leaders: up to 2. */
-@media (min-width: 680px) {
+@media (min-width: 700px) {
     .researchers, .researchers-highlight {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -88,24 +88,39 @@
 }
 
 .researcher-back {
-    margin-bottom: 1.5rem;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
+    
+    margin: 1rem 1.5rem;
+
+    &:before {
+        content: "←";
+        margin-right: 0.5rem;
+    }
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+        margin: 1rem 3rem;
+    }
 }
 
 .researcher-full {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
     margin: 2rem 1.5rem;
 
     @media (min-width: 700px) {
-        margin: 6rem;
+        flex-direction: row;
+        margin: 2rem 3rem;
     }
 
     .researcher-media {
+        flex: 0 0 auto;
         margin: 0 0 0 1rem;
+    }
+
+    .researcher-content {
+        flex: 1;
+        min-width: 0;
     }
 
     img {
@@ -117,8 +132,16 @@
     }
 
     h2 {
-        line-height: 1;
+        font-size: 2rem;
+        line-height: 2.5rem;
         margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 1000px) {
+        h2 {
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
     }
 
     .researcher-title {

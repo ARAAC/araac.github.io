@@ -3,19 +3,22 @@ layout: framework
 ---
 
 {% assign page.title = page.name %}
+<p class="researcher-back"><a href="{{ "/" | relative_url }}">All researchers</a></p>
 <div class="researcher-full">
     {% assign name = page.url | split: "/" | last | split: "." | first %}
     {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
     <div class="researcher-media">
         <img class="headshot" src='{{ img | relative_url }}' alt='{{ page.name }}'>
-        {% if page.profile %}<p><a href="{{ page.profile | relative_url }}">Institution Profile</a></p>{% endif %}
     </div>
     <div class="researcher-content">
-        <p class="researcher-back"><a href="{{ "/" | relative_url }}">&larr; All researchers</a></p>
         <h2>
             <span class="researcher-title">{{ page.rank}}</span>
             {{ page.name }}</h2>
         <p class="researcher-org">{{ page.org }}</p>
         <div class="researcher-bio">{{ content }}</div>
+        <p class="researcher-links">
+            {% if page.profile %}<a href="{{ page.profile | relative_url }}">Institution Profile</a></p>{% endif %}
+            {% if page.personal %}<a href="{{ page.personal | relative_url }}">Personal Website</a></p>{% endif %}
+        </p>
     </div>
 </div>
