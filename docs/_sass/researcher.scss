@@ -87,21 +87,6 @@
     }
 }
 
-.researcher-back {
-    
-    margin: 1rem 1.5rem;
-
-    &:before {
-        content: "←";
-        margin-right: 0.5rem;
-    }
-
-    @media (min-width: 700px) {
-        flex-direction: row;
-        margin: 1rem 3rem;
-    }
-}
-
 .researcher-full {
     display: flex;
     flex-direction: column;

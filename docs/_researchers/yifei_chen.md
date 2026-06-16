@@ -3,8 +3,7 @@ rank:
 name: Yifei Chen
 org: University of Groningen, the Netherlands
 type: visitor
-layout: researcher
-profile: https://www.rug.nl/staff/yifei.chen/research
+profile: https://yfchenshirley.github.io/yifei.chen/
 order: 3
 short: >-
     Yifei Chen is a Ph.D. candidate at the University of Groningen, the Netherlands. Yifei’s research mainly focuses on fundamental reinforcement learning, especially methods to improve efficiency and reduce the bias of reinforcement learning algorithms. She is also interested in applying her methods to robotics.

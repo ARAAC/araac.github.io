@@ -3,9 +3,11 @@ rank: Dr
 name: Francisco Cruz
 org: UNSW
 type: staff
-layout: researcher
 profile: https://research.unsw.edu.au/people/dr-francisco-cruz-naranjo
 order: 1
+projects:
+  - explainable_ai
+  - human_agent_interaction
 short: >-
     Francisco's current research interests include reinforcement learning, explainable artificial intelligence, human-robot interaction, artificial neural networks, and psychologically and bio-inspired models.
 ---

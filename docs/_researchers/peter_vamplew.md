@@ -3,9 +3,11 @@ rank: Professor
 name: Peter Vamplew
 org: Federation University Australia
 type: staff
-layout: researcher
 profile: https://federation.edu.au/research/find-an-expert/peter-vamplew
 order: 0
+projects:
+  - morl
+  - ai_safety
 short: >-
     Peter is co-founder/co-leader of ARAAC, and a senior member of the Future of Life Institute’s Existential AI safety Research Community. He has played a leading role in establishing multi-objective reinforcement learning (MORL) as a sub-field of reinforcement learning, explicitly designed for problems with multiple conflicting objectives (which describes most real-world problems)
 ---

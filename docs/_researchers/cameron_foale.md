@@ -3,9 +3,11 @@ rank: Associate Professor
 name: Cameron Foale
 org: Federation University Australia
 type: staff
-layout: researcher
 profile: https://federation.edu.au/research/find-an-expert/cameron-foale
 order: 1
+projects:
+  - morl
+  - ai_safety
 short: >-
   Cameron has an interest in building usable, fair, transparent,
   and scalable connected eHealth systems, and applying AI techniques

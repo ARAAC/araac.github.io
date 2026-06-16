@@ -3,9 +3,10 @@ rank: Dr
 name: Bahar Nakisa
 org: Deakin University
 type: staff
-layout: researcher
-profile: https://www.deakin.edu.au/about-deakin/people/bahar-nakisa
+profile: https://experts.deakin.edu.au/51664-bahareh-nakisa
 order: 1
+projects:
+  - ai_safety
 short: >-
     Dr. Bahareh Nakisa is a Lecturer of Applied AI and the course director of Applied AI at School of Information Technology, Deakin University. Bahar's expertise spans multiple domains, encompassing applied AI, deep learning, computer vision, affective computing, and human-aligned AI in autonomous systems.
 ---

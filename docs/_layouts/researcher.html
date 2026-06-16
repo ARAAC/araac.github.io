@@ -3,7 +3,9 @@ layout: framework
 ---
 
 {% assign page.title = page.name %}
-<p class="researcher-back"><a href="{{ "/" | relative_url }}">All researchers</a></p>
+<div class="scroll-box hero-box-hands">
+<p class="back"><a href="{{ "/" | relative_url }}#researchers">All researchers</a></p>
+</div>
 <div class="researcher-full">
     {% assign name = page.url | split: "/" | last | split: "." | first %}
     {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
@@ -20,5 +22,6 @@ layout: framework
             {% if page.profile %}<a href="{{ page.profile | relative_url }}">Institution Profile</a></p>{% endif %}
             {% if page.personal %}<a href="{{ page.personal | relative_url }}">Personal Website</a></p>{% endif %}
         </p>
+        {% include publications.html author=page.slug %}
     </div>
 </div>

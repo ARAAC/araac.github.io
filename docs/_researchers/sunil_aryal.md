@@ -3,9 +3,10 @@ rank: Associate Professor
 name: Sunil Aryal
 org: Deakin University
 type: staff
-layout: researcher
-profile: https://www.deakin.edu.au/about-deakin/people/sunil-aryal
+profile: https://experts.deakin.edu.au/46689-sunil-aryal
 order: 1
+projects:
+  - explainable_ai
 short: >-
     Sunil works in a wide range of areas in ML/AI from similarity measures, anomaly detection, classification, clustering, text/image analysis, ensemble learning, learning from small subsamples of data, and robust/explainable machine learning to autonomous systems.
 ---

@@ -1,0 +1,35 @@
+---
+layout: framework
+---
+<div class="scroll-box hero-box-hands">
+<p class="back"><a href="{{ "/" | relative_url }}#projects">All projects</a></p>
+</div>
+<div class="project-full">
+    <h2>{{ page.title }}</h2>
+    <div class="project-bio">{{ content }}</div>
+
+    {% assign team = site.researchers | where_exp: "r", "r.projects contains page.slug" %}
+    {% if team.size > 0 %}
+    <h4 class="section-split">Key Researchers</h4>
+    <div class="researchers">
+        {% for researcher in team %}
+        <div class="researcher">
+            {% assign name = researcher.path | split: "/" | last | split: "." | first %}
+            {% assign img = "/assets/photos/" | append: name | append: ".webp" %}
+            <img src='{{ img | relative_url }}' alt='{{ researcher.name }}' loading='lazy'>
+            {% assign titleclass = "researcher-title" %}
+            {% if researcher.rank == "Professor" or researcher.rank == "Associate Professor" %}{% assign titleclass = "researcher-title-long" %}{% endif %}
+            <h2>
+                <span class="{{ titleclass }}">{{ researcher.rank }}</span>
+                <a href="{{ researcher.url | relative_url }}">{{ researcher.name }}</a></h2>
+            <p class="researcher-org">{{ researcher.org }}</p>
+            <div class="researcher-bio">{{ researcher.short | markdownify }}
+                <p class="researcher-link"><a href="{{ researcher.url | relative_url }}">View profile<span aria-hidden="true"> &rarr;</span></a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% include publications.html project=page.slug %}
+</div>

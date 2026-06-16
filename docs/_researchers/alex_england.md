@@ -3,7 +3,6 @@ rank:
 name: Alex England
 org: Deakin University
 type: student
-layout: researcher
 profile: 
 order: 2
 short: >-

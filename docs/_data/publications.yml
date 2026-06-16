@@ -1,0 +1,534 @@
+# Big ol' list of publications.
+#
+# Sadly Jekyll doesn't really support BibTeX.
+#
+# These are listed on both researcher profiles pages, as well as on 
+# project/topic pages.
+#
+# Publications can be attached to zero or more projects, and will be
+# listed on all of them in reverse date order.
+#
+# If there's value in flagging "key papers" let Cam know.
+#
+# Each publication needs:
+#   title:    full paper title (required)
+#   year:     publication year (required; used for sort, newest first)
+#   venue:    journal / conference name (optional)
+#   url:      link to paper, DOI preferred (optional)
+#   projects: list of project slugs this paper relates to — must match the
+#             `slug` in docs/_projects/*.md (morl, ai_safety, explainable_ai,
+#             human_agent_interaction)
+#   authors:  ordered list. Each author is { name: "...", ref: <slug> }.
+#             `ref` is OPTIONAL and only set for ARAAC members — it is the
+#             researcher's _researchers/<slug>.md basename. Authors with a
+#             ref are highlighted and linked to their profile page; authors
+#             without one render as plain text.
+#
+
+# ---------------------------------------------------------------------------
+# Multi-Objective Reinforcement Learning (morl) + AI Safety (ai_safety)
+# ---------------------------------------------------------------------------
+
+- title: "Utility-Based Reinforcement Learning: Unifying Single-objective and Multi-objective Reinforcement Learning"
+  year: 2024
+  venue: "International Conference on Autonomous Agents and Multiagent Systems (AAMAS)"
+  url: "https://arxiv.org/abs/2402.02665"
+  projects: [morl, ai_safety]
+  authors:
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "C. Foale", ref: cameron_foale }
+    - { name: "C. F. Hayes" }
+    - { name: "P. Mannion" }
+    - { name: "E. Howley" }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "S. Johnson", ref: scott_johnson }
+    - { name: "J. Källström" }
+    - { name: "G. Ramos" }
+    - { name: "R. Rădulescu" }
+    - { name: "W. Röpke" }
+    - { name: "D. M. Roijers" }
+
+- title: "An empirical investigation of value-based multi-objective reinforcement learning for stochastic environments"
+  year: 2025
+  venue: "The Knowledge Engineering Review"
+  url: "https://doi.org/10.1017/S0269888925100052"
+  projects: [morl]
+  authors:
+    - { name: "K. Ding" }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "C. Foale", ref: cameron_foale }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+
+- title: "Scalar reward is not enough: a response to Silver, Singh, Precup and Sutton (2021)"
+  year: 2022
+  venue: "Autonomous Agents and Multi-Agent Systems (JAAMAS)"
+  url: "https://doi.org/10.1007/s10458-022-09575-5"
+  projects: [ai_safety, morl]
+  authors:
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "B. J. Smith" }
+    - { name: "J. Källström" }
+    - { name: "G. Ramos" }
+    - { name: "R. Rădulescu" }
+    - { name: "D. M. Roijers" }
+    - { name: "C. F. Hayes" }
+    - { name: "F. Heintz" }
+    - { name: "P. Mannion" }
+    - { name: "P. J. K. Libin" }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "C. Foale", ref: cameron_foale }
+
+- title: "A practical guide to multi-objective reinforcement learning and planning"
+  year: 2022
+  venue: "Autonomous Agents and Multi-Agent Systems (JAAMAS)"
+  url: "https://doi.org/10.1007/s10458-022-09552-y"
+  projects: [morl]
+  authors:
+    - { name: "C. F. Hayes" }
+    - { name: "R. Rădulescu" }
+    - { name: "E. Bargiacchi" }
+    - { name: "J. Källström" }
+    - { name: "M. Macfarlane" }
+    - { name: "M. Reymond" }
+    - { name: "T. Verstraeten" }
+    - { name: "L. M. Zintgraf" }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "F. Heintz" }
+    - { name: "E. Howley" }
+    - { name: "A. A. Irissappane" }
+    - { name: "P. Mannion" }
+    - { name: "A. Nowé" }
+    - { name: "G. Ramos" }
+    - { name: "M. Restelli" }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "D. M. Roijers" }
+
+- title: "The impact of environmental stochasticity on value-based multiobjective reinforcement learning"
+  year: 2022
+  venue: "Neural Computing and Applications"
+  url: "https://doi.org/10.1007/s00521-021-05859-1"
+  projects: [morl]
+  authors:
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "C. Foale", ref: cameron_foale }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+
+- title: "Potential-based multiobjective reinforcement learning approaches to low-impact agents for AI safety"
+  year: 2021
+  venue: "Engineering Applications of Artificial Intelligence"
+  url: "https://doi.org/10.1016/j.engappai.2021.104186"
+  projects: [ai_safety, morl]
+  authors:
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "C. Foale", ref: cameron_foale }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "A. Bignold" }
+
+- title: "A multi-objective deep reinforcement learning framework"
+  year: 2020
+  venue: "Engineering Applications of Artificial Intelligence"
+  url: "https://doi.org/10.1016/j.engappai.2020.103915"
+  projects: [morl]
+  authors:
+    - { name: "T. T. Nguyen" }
+    - { name: "N. D. Nguyen" }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "S. Nahavandi" }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "C. P. Lim" }
+
+- title: "Softmax exploration strategies for multiobjective reinforcement learning"
+  year: 2017
+  venue: "Neurocomputing"
+  url: "https://doi.org/10.1016/j.neucom.2016.09.141"
+  projects: [morl]
+  authors:
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "C. Foale", ref: cameron_foale }
+
+- title: "Steering approaches to Pareto-optimal multiobjective reinforcement learning"
+  year: 2017
+  venue: "Neurocomputing"
+  url: "https://doi.org/10.1016/j.neucom.2016.08.152"
+  projects: [morl]
+  authors:
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "R. Issabekov" }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "C. Foale", ref: cameron_foale }
+    - { name: "A. Berry" }
+    - { name: "T. Moore" }
+    - { name: "D. Creighton" }
+
+- title: "A survey of multi-objective sequential decision-making"
+  year: 2013
+  venue: "Journal of Artificial Intelligence Research"
+  url: "https://doi.org/10.1613/jair.3987"
+  projects: [morl]
+  authors:
+    - { name: "D. M. Roijers" }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "S. Whiteson" }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+
+- title: "Human-aligned artificial intelligence is a multiobjective problem"
+  year: 2018
+  venue: "Ethics and Information Technology"
+  url: "https://doi.org/10.1007/s10676-017-9440-6"
+  projects: [ai_safety, morl]
+  authors:
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "C. Foale", ref: cameron_foale }
+    - { name: "S. Firmin" }
+    - { name: "J. Mummery" }
+
+# ---------------------------------------------------------------------------
+# AI Safety / human-aligned AI (ai_safety)
+# ---------------------------------------------------------------------------
+
+- title: "AI apology: a critical review of apology in AI systems"
+  year: 2025
+  venue: "Artificial Intelligence Review"
+  url: "https://doi.org/10.1007/s10462-025-11305-8"
+  projects: [ai_safety]
+  authors:
+    - { name: "H. Harland", ref: haddie_harland }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "H. Senaratne" }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "B. Nakisa", ref: bahar_nakisa }
+
+- title: "AI apology: interactive multi-objective reinforcement learning for human-aligned AI"
+  year: 2023
+  venue: "Neural Computing and Applications"
+  url: "https://doi.org/10.1007/s00521-023-08586-x"
+  projects: [ai_safety, morl, human_agent_interaction]
+  authors:
+    - { name: "H. Harland", ref: haddie_harland }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "B. Nakisa", ref: bahar_nakisa }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+
+# ---------------------------------------------------------------------------
+# Explainable AI (explainable_ai)
+# ---------------------------------------------------------------------------
+
+- title: "Explainable reinforcement learning for broad-XAI: a conceptual framework and survey"
+  year: 2023
+  venue: "Neural Computing and Applications"
+  url: "https://doi.org/10.1007/s00521-023-08423-1"
+  projects: [explainable_ai]
+  authors:
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "F. Cruz", ref: francisco_cruz }
+
+- title: "Levels of explainable artificial intelligence for human-aligned conversational explanations"
+  year: 2021
+  venue: "Artificial Intelligence"
+  url: "https://doi.org/10.1016/j.artint.2021.103525"
+  projects: [explainable_ai, human_agent_interaction]
+  authors:
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "C. Foale", ref: cameron_foale }
+    - { name: "C. Young" }
+    - { name: "S. Aryal", ref: sunil_aryal }
+    - { name: "F. Cruz", ref: francisco_cruz }
+
+- title: "Evaluating human-like explanations for robot actions in reinforcement learning scenarios"
+  year: 2022
+  venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  url: "https://doi.org/10.1109/IROS47612.2022.9981334"
+  projects: [explainable_ai, human_agent_interaction]
+  authors:
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "C. Young" }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+
+- title: "Explainable robotic systems: understanding goal-driven actions in a reinforcement learning scenario"
+  year: 2021
+  venue: "Neural Computing and Applications"
+  url: "https://doi.org/10.1007/s00521-021-06425-5"
+  projects: [explainable_ai]
+  authors:
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "I. Moreira" }
+
+- title: "Memory-based explainable reinforcement learning"
+  year: 2019
+  venue: "Australasian Joint Conference on Artificial Intelligence (AI 2019)"
+  url: "https://doi.org/10.1007/978-3-030-35288-2_6"
+  projects: [explainable_ai]
+  authors:
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+
+- title: "Understanding user preferences in explainable artificial intelligence: a mapping function proposal"
+  year: 2025
+  venue: "ACM Transactions on Intelligent Systems and Technology"
+  url: "https://doi.org/10.1145/3733837"
+  projects: [explainable_ai]
+  authors:
+    - { name: "M. Hashemi" }
+    - { name: "A. Darejeh" }
+    - { name: "F. Cruz", ref: francisco_cruz }
+
+- title: "Analysis of explainable goal-driven reinforcement learning in a continuous simulated environment"
+  year: 2022
+  venue: "Algorithms"
+  url: "https://doi.org/10.3390/a15030091"
+  projects: [explainable_ai]
+  authors:
+    - { name: "E. Portugal" }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "A. Ayala" }
+    - { name: "B. Fernandes" }
+
+# ---------------------------------------------------------------------------
+# Human–Agent Interaction (human_agent_interaction)
+# ---------------------------------------------------------------------------
+
+- title: "Human-aligned reinforcement learning for autonomous agents and robots"
+  year: 2023
+  venue: "Neural Computing and Applications"
+  url: "https://doi.org/10.1007/s00521-023-08748-x"
+  projects: [human_agent_interaction, ai_safety]
+  authors:
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "T. G. Karimpanal", ref: thommen_george_karimpanal }
+    - { name: "M. A. Solis" }
+    - { name: "P. Barros" }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+
+- title: "Persistent rule-based interactive reinforcement learning"
+  year: 2023
+  venue: "Neural Computing and Applications"
+  url: "https://doi.org/10.1007/s00521-021-06466-w"
+  projects: [human_agent_interaction]
+  authors:
+    - { name: "A. Bignold" }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "C. Foale", ref: cameron_foale }
+
+- title: "Human engagement providing evaluative and informative advice for interactive reinforcement learning"
+  year: 2023
+  venue: "Neural Computing and Applications"
+  url: "https://doi.org/10.1007/s00521-021-06850-6"
+  projects: [human_agent_interaction]
+  authors:
+    - { name: "A. Bignold" }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "C. Foale", ref: cameron_foale }
+
+- title: "A conceptual framework for externally-influenced agents: an assisted reinforcement learning review"
+  year: 2021
+  venue: "Journal of Ambient Intelligence and Humanized Computing"
+  url: "https://doi.org/10.1007/s12652-021-03489-y"
+  projects: [human_agent_interaction]
+  authors:
+    - { name: "A. Bignold" }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "M. E. Taylor" }
+    - { name: "T. Brys" }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "C. Foale", ref: cameron_foale }
+
+- title: "An evaluation methodology for interactive reinforcement learning with simulated users"
+  year: 2021
+  venue: "Biomimetics"
+  url: "https://doi.org/10.3390/biomimetics6010013"
+  projects: [human_agent_interaction]
+  authors:
+    - { name: "A. Bignold" }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "C. Foale", ref: cameron_foale }
+
+- title: "Towards a broad-persistent advising approach for deep interactive reinforcement learning in robotic environments"
+  year: 2023
+  venue: "Sensors"
+  url: "https://doi.org/10.3390/s23052681"
+  projects: [human_agent_interaction]
+  authors:
+    - { name: "H. S. Nguyen" }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+
+- title: "A robust approach for continuous interactive actor-critic algorithms"
+  year: 2021
+  venue: "IEEE Access"
+  url: "https://doi.org/10.1109/ACCESS.2021.3099071"
+  projects: [human_agent_interaction]
+  authors:
+    - { name: "C. C. Millan-Arias" }
+    - { name: "B. J. T. Fernandes" }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "S. Fernandes" }
+
+- title: "Deep reinforcement learning with interactive feedback in a human-robot environment"
+  year: 2020
+  venue: "Applied Sciences"
+  url: "https://doi.org/10.3390/app10165574"
+  projects: [human_agent_interaction]
+  authors:
+    - { name: "I. Moreira" }
+    - { name: "J. Rivas" }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "A. Ayala" }
+    - { name: "B. Fernandes" }
+
+# ---------------------------------------------------------------------------
+# Karimpanal / Nakisa additions (harvested from their Deakin Experts feeds)
+# ---------------------------------------------------------------------------
+
+- title: "Human-Aligned Skill Discovery: Balancing Behaviour Exploration and Alignment"
+  year: 2025
+  venue: "International Conference on Autonomous Agents and Multiagent Systems (AAMAS)"
+  url: "https://doi.org/10.65109/zimd9956"
+  projects: [ai_safety, human_agent_interaction]
+  authors:
+    - { name: "M. Hussonnois" }
+    - { name: "T. G. Karimpanal", ref: thommen_george_karimpanal }
+    - { name: "S. Rana" }
+
+- title: "Human-informed skill discovery: Controlled diversity with preference in reinforcement learning"
+  year: 2025
+  venue: "Expert Systems with Applications"
+  url: "https://doi.org/10.1016/j.eswa.2025.128604"
+  projects: [human_agent_interaction]
+  authors:
+    - { name: "M. Hussonnois" }
+    - { name: "T. G. Karimpanal", ref: thommen_george_karimpanal }
+    - { name: "M. S. Jha" }
+    - { name: "S. Rana" }
+
+- title: "BCR-DRL: Behavior- and Context-Aware Reward for Deep Reinforcement Learning in Human-AI Coordination"
+  year: 2025
+  venue: "European Conference on Artificial Intelligence (ECAI)"
+  url: "https://doi.org/10.3233/faia251044"
+  projects: [human_agent_interaction]
+  authors:
+    - { name: "X. Hao" }
+    - { name: "B. Nakisa", ref: bahar_nakisa }
+    - { name: "M. N. Rastgoo" }
+    - { name: "G. Pang" }
+
+- title: "EMOTE: An Explainable Architecture for Modelling the Other through Empathy"
+  year: 2024
+  venue: "International Joint Conference on Artificial Intelligence (IJCAI)"
+  url: "https://doi.org/10.24963/ijcai.2024/539"
+  projects: [explainable_ai, human_agent_interaction]
+  authors:
+    - { name: "M. Senadeera" }
+    - { name: "T. G. Karimpanal", ref: thommen_george_karimpanal }
+    - { name: "S. Jacobs" }
+    - { name: "S. Gupta" }
+    - { name: "S. Rana" }
+
+- title: "Personalisation via Dynamic Policy Fusion"
+  year: 2024
+  venue: "International Conference on Human-Agent Interaction (HAI)"
+  url: "https://doi.org/10.1145/3687272.3690916"
+  projects: [human_agent_interaction]
+  authors:
+    - { name: "A. Shereef Palattuparambil" }
+    - { name: "T. G. Karimpanal", ref: thommen_george_karimpanal }
+    - { name: "S. Rana" }
+
+- title: "Learning Transferable Domain Priors for Safe Exploration in Reinforcement Learning"
+  year: 2020
+  venue: "International Joint Conference on Neural Networks (IJCNN)"
+  url: "https://doi.org/10.1109/IJCNN48605.2020.9207344"
+  projects: [ai_safety]
+  authors:
+    - { name: "T. G. Karimpanal", ref: thommen_george_karimpanal }
+    - { name: "S. Rana" }
+    - { name: "S. Gupta" }
+    - { name: "T. Tran" }
+    - { name: "S. Venkatesh" }
+
+- title: "Identification and off-policy learning of multiple objectives using adaptive clustering"
+  year: 2017
+  venue: "Neurocomputing"
+  url: "https://doi.org/10.1016/j.neucom.2017.04.074"
+  projects: [morl]
+  authors:
+    - { name: "T. G. Karimpanal", ref: thommen_george_karimpanal }
+    - { name: "E. Wilhelm" }
+
+# ---------------------------------------------------------------------------
+# Not yet attached to a project (ARAAC-authored, but off-theme for the
+# current four projects). Listed here so they surface on researcher pages.
+# ---------------------------------------------------------------------------
+
+- title: "A NetHack Learning Environment Language Wrapper for Autonomous Agents"
+  year: 2023
+  venue: "Journal of Open Research Software"
+  url: "https://doi.org/10.5334/jors.444"
+  projects: []
+  authors:
+    - { name: "N. Goodger", ref: nikolaj_goodger }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "C. Foale", ref: cameron_foale }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+
+- title: "Language Representations for Generalization in Reinforcement Learning"
+  year: 2021
+  venue: "Asian Conference on Machine Learning (ACML)"
+  projects: []
+  authors:
+    - { name: "N. Goodger", ref: nikolaj_goodger }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "C. Foale", ref: cameron_foale }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+
+- title: "Elastic step DDPG: Multi-step reinforcement learning for improved sample efficiency"
+  year: 2023
+  venue: "International Joint Conference on Neural Networks (IJCNN)"
+  url: "https://doi.org/10.1109/IJCNN54540.2023.10191774"
+  projects: []
+  authors:
+    - { name: "A. Ly", ref: adrian_ly }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "S. Aryal", ref: sunil_aryal }
+
+- title: "Elastic step DQN: A novel multi-step algorithm to alleviate overestimation in Deep Q-Networks"
+  year: 2024
+  venue: "Neurocomputing"
+  url: "https://doi.org/10.1016/j.neucom.2023.127170"
+  projects: []
+  authors:
+    - { name: "A. Ly", ref: adrian_ly }
+    - { name: "R. Dazeley", ref: richard_dazeley }
+    - { name: "P. Vamplew", ref: peter_vamplew }
+    - { name: "F. Cruz", ref: francisco_cruz }
+    - { name: "S. Aryal", ref: sunil_aryal }
+
+- title: "Boosting reinforcement learning algorithms in continuous robotic reaching tasks using adaptive potential functions"
+  year: 2024
+  venue: "Australasian Joint Conference on Artificial Intelligence (AI 2024)"
+  url: "https://doi.org/10.1007/978-981-96-0351-0_5"
+  projects: []
+  authors:
+    - { name: "Y. Chen", ref: yifei_chen }
+    - { name: "L. Schomaker" }
+    - { name: "F. Cruz", ref: francisco_cruz }

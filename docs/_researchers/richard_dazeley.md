@@ -3,9 +3,12 @@ rank: Professor
 name: Richard Dazeley
 org: Deakin University
 type: staff
-layout: researcher
-profile: https://www.deakin.edu.au/about-deakin/people/richard-dazeley
+profile: https://experts.deakin.edu.au/44989-richard-dazeley
 order: 0
+projects:
+  - morl
+  - ai_safety
+  - explainable_ai
 short: >-
     Richard is the Leader of the Machine Intelligence Lab at Deakin University (Geelong), and the Deputy Head of School. He is a leading researcher in the Human-alignment of autonomous agents through Safe, Ethical, Explainable and Interactive methods utilising Multiobjective Reinforcement Learning (MORL) and is a senior member of the AI existential Safety Community
 ---

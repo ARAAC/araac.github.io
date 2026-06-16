@@ -1,0 +1,12 @@
+<a name="projects"></a>
+<h4 class="section-split">Key Projects</h4>
+<div class="projects">
+    {% assign sorted = site.projects | sort: "order" %}
+    {% for project in sorted %}
+        <div class="project">
+            <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+            <p class="project-desc">{{ project.short | markdownify }}</p>
+            <p class="project-link"><a href="{{ project.url | relative_url }}">View project<span aria-hidden="true"> &rarr;</span></a></p>  
+        </div>
+    {% endfor %}
+</div>

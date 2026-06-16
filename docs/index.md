@@ -11,4 +11,6 @@ The Australian Responsible Autonomous Agents Collective (ARAAC) are focused on a
 
 Our mission is to drive innovation while anchoring our discoveries in responsible and ethical practices. We strive to make AI not just advanced but also accountable, ensuring its alignment with human interests.
 
+{% include projects.html %}
+
 {% include researchers.html %}

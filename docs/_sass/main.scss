@@ -69,3 +69,31 @@ button:focus-visible,
     scroll-behavior: auto !important;
   }
 }
+
+.back {
+    
+    margin: 1rem 1.5rem;
+    
+    > a {
+      &:before {
+        content: "←";
+        margin-right: 0.5rem;
+      }
+
+      color: var(--text-color-invert);
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      :hover {
+        text-decoration: underline;
+        transform: translateX(-4px);
+      }
+
+    }
+    
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+        margin: 1rem 3rem;
+    }
+}

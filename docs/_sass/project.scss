@@ -1,0 +1,93 @@
+/* Front-page Key Projects card grid */
+.projects {
+    display: grid;
+    gap: 2rem;
+    align-items: stretch;
+    grid-template-columns: 1fr;
+
+    .project {
+        display: flex;
+        flex-direction: column;
+
+        padding: 1.5rem;
+        border: 1px solid var(--accent-color);
+        border-radius: 1rem;
+
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .project-desc {
+            margin-bottom: 1rem;
+        }
+
+        /* Push the link to the bottom so cards of differing height line up. */
+        .project-link {
+            margin-top: auto;
+            margin-bottom: 0;
+
+            a {
+                text-decoration: none;
+                font-weight: 600;
+
+                span {
+                    display: inline-block;
+                    transition: transform 0.2s ease;
+                }
+
+                &:hover span {
+                    transform: translateX(3px);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.project-full {
+    margin: 2rem 1.5rem;
+
+    @media (min-width: 700px) {
+        margin: 2rem 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    @media (min-width: 1000px) {
+        h2 {
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+    }
+
+    .project-bio {
+        max-width: 60rem;
+    }
+}

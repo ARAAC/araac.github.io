@@ -1,0 +1,35 @@
+.publications {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.publication {
+    margin-bottom: 1.4rem;
+    line-height: 1.5;
+}
+
+.pub-authors {
+    color: #444;
+}
+
+.araac-author {
+    font-weight: 600;
+    color: inherit;
+}
+
+a.araac-author {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.pub-title {
+    font-weight: 600;
+}
+
+.pub-venue {
+    display: block;
+    color: #666;
+    font-size: 0.95em;
+}

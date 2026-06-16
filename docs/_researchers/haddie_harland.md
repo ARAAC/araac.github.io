@@ -3,9 +3,11 @@ rank:
 name: Hadassah Harland (Haddie)
 org: Deakin University
 type: student
-layout: researcher
-profile: https://www.deakin.edu.au/about-deakin/people/hadassah-harland
+profile: https://experts.deakin.edu.au/58253-haddie-harland
 order: 2
+projects:
+  - morl
+  - human_agent_interaction
 short: >-
    Haddie is a PhD student at Deakin University (Geelong) and Top-Up Scholarship recipient with CSIRO's Data61 Robotics and Autonomous Systems Group, with an interest in Human-Machine Collaboration.
 ---

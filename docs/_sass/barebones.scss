@@ -53,6 +53,9 @@ html {
     --text-color-softer: hsl(var(--theme-hue), 0%, 33%);
     /* #555555 */
 
+    --text-color-invert: hsl(var(--theme-hue), 0%, 93%);
+    /* #eeeeee 		inverted text color, for dark backgrounds */    
+
     --accent-color: hsl(var(--accent-hue), 86%, 40%);
     /* #33C3F0 		link */
     --accent-color-hover: hsl(var(--accent-hue), 76%, 30%);

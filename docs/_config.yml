@@ -14,8 +14,6 @@ collections:
     output: true
   projects:
     output: true
-  publications:
-    output: true
 
 defaults:
   - scope:
