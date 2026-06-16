@@ -5,7 +5,7 @@ layout: framework
 <p class="back"><a href="{{ "/" | relative_url }}#projects">All projects</a></p>
 </div>
 <div class="project-full">
-    <h2>{{ page.title }}</h2>
+    <h1>{{ page.title }}</h1>
     <div class="project-bio">{{ content }}</div>
 
     {% assign team = site.researchers | where_exp: "r", "r.projects contains page.slug" %}

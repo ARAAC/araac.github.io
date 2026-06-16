@@ -18,7 +18,7 @@ header {
         display: block;
     }
 
-    h1 {
+    .site-name {
         font-size: 2rem;
         font-weight: bold;
         margin: 0;
@@ -29,7 +29,7 @@ header {
     @media (min-width: 700px) {
         padding: 3rem 6rem;
 
-        h1 {
+        .site-name {
             font-size: 3rem;
         }
     }
