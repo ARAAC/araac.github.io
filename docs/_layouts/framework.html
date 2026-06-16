@@ -12,10 +12,14 @@
       "name": {{ site.title | jsonify }},
       "alternateName": {{ site.tagline | jsonify }},
       "url": {{ '/' | absolute_url | jsonify }},
-      "logo": {{ '/assets/images/araac_logo.svg' | absolute_url | jsonify }},
+      "logo": {{ '/assets/images/araac-logo.png' | absolute_url | jsonify }},
       "description": {{ site.description | strip_newlines | strip | jsonify }}
     }
     </script>
+    <link rel="icon" href="{{ "/favicon.ico" | relative_url }}" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/images/favicon-32x32.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/images/favicon-16x16.png" | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ "/assets/images/apple-touch-icon.png" | relative_url }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">

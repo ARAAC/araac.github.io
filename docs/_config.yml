@@ -1,5 +1,6 @@
 title: ARAAC
 tagline: Australian Responsible Autonomous Agents Collective
+lang: en-AU # drives <html lang> and seo-tag's og:locale (en_AU)
 email: c.foale@federation.edu.au
 description: >-
   The Australian Responsible Autonomous Agents Collective (ARAAC) is a
@@ -7,6 +8,8 @@ description: >-
   and explainable artificial intelligence — specialising in multi-objective
   reinforcement learning, explainability, transparency, and AI safety.
 url: "https://araac.au" # the canonical hostname & protocol (matches docs/CNAME)
+twitter:
+  card: summary_large_image
 
 permalink: pretty
 
@@ -21,6 +24,10 @@ collections:
     output: true
 
 defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-default.png # default OG/Twitter banner (1200x630); any page may override with its own `image`
   - scope:
       path: ""
       type: researchers
