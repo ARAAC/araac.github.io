@@ -13,22 +13,9 @@ layout: framework
     {% if team.size > 0 %}
     <h4 class="section-split">Key Researchers</h4>
     <div class="researchers">
-        {% for researcher in team %}
-        <div class="researcher">
-            {% assign name = researcher.path | split: "/" | last | split: "." | first %}
-            {% assign img = "/assets/photos/" | append: name | append: ".webp" %}
-            <img src='{{ img | relative_url }}' alt='{{ researcher.title }}' loading='lazy'>
-            {% assign titleclass = "researcher-title" %}
-            {% if researcher.rank == "Professor" or researcher.rank == "Associate Professor" %}{% assign titleclass = "researcher-title-long" %}{% endif %}
-            <h2>
-                <span class="{{ titleclass }}">{{ researcher.rank }}</span>
-                <a href="{{ researcher.url | relative_url }}">{{ researcher.title }}</a></h2>
-            <p class="researcher-org">{{ researcher.org }}</p>
-            <div class="researcher-bio">{{ researcher.short | markdownify }}
-                <p class="researcher-link"><a href="{{ researcher.url | relative_url }}">View profile<span aria-hidden="true"> &rarr;</span></a></p>
-            </div>
-        </div>
-        {% endfor %}
+        {% include researcher_list.html researchers=team order=0 %}
+        {% include researcher_list.html researchers=team order=1 %}
+        {% include researcher_list.html researchers=team order=2 %}
     </div>
     {% endif %}
 

@@ -1,0 +1,28 @@
+{%- comment -%}
+Renders a list of researchers given an order
+
+Use like:
+{% include researcher_list order=0 %}
+{% include researcher_list researchers=list order=0 %}
+
+{%- endcomment -%}
+{% assign sorted = site.researchers | where: "order", include.order %}
+{% if include.researchers %}
+    {% assign sorted = include.researchers | where: "order", include.order %}
+{% endif %}
+{% for researcher in sorted %}
+    <div class="researcher">
+        {% assign name = researcher.path | split: "/" | last | split: "." | first %}
+        {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
+        <img src='{{ img | relative_url }}' alt='{{ researcher.title }}' loading='lazy'>
+        {% assign titleclass = "researcher-title" %}
+        {% if researcher.rank == "Professor" or researcher.rank == "Associate Professor" %}{% assign titleclass = "researcher-title-long" %}{% endif %}
+        <h2>
+            <span class="{{ titleclass }}">{{ researcher.rank}}</span>
+            <a href="{{ researcher.url | relative_url }}">{{ researcher.title }}</a></h2>
+        <p class="researcher-org">{{ researcher.org }}</p>
+        <div class="researcher-bio">{{ researcher.short | markdownify }}
+            <p class="researcher-link"><a href="{{ researcher.url | relative_url }}">View profile<span aria-hidden="true"> &rarr;</span></a></p>
+        </div>
+    </div>
+{% endfor %}
