@@ -2,7 +2,6 @@
 rank: 
 title: Hadassah Harland (Haddie)
 org: Deakin University
-type: student
 profile: https://experts.deakin.edu.au/58253-haddie-harland
 order: 2
 projects:

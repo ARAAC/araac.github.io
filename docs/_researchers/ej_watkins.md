@@ -2,7 +2,6 @@
 rank: 
 title: Ethan Watkins (EJ)
 org: ARAAC
-type: visitor
 profile: 
 order: 3
 projects:

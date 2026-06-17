@@ -2,7 +2,6 @@
 rank: Professor
 title: Richard Dazeley
 org: Deakin University
-type: staff
 profile: https://experts.deakin.edu.au/44989-richard-dazeley
 order: 0
 projects:

@@ -2,7 +2,6 @@
 rank: 
 title: Adrian Ly
 org: Deakin University
-type: student
 profile: 
 order: 2
 short: >-

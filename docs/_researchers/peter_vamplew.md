@@ -2,7 +2,6 @@
 rank: Professor
 title: Peter Vamplew
 org: Federation University Australia
-type: staff
 profile: https://federation.edu.au/research/find-an-expert/peter-vamplew
 order: 0
 projects:

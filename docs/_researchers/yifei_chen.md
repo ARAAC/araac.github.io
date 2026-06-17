@@ -2,7 +2,6 @@
 rank: 
 title: Yifei Chen
 org: University of Groningen, the Netherlands
-type: visitor
 profile: https://yfchenshirley.github.io/yifei.chen/
 order: 3
 short: >-
