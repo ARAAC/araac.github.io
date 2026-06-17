@@ -25,6 +25,18 @@
         max-height: 10ch;
         max-width: 100%;
     }
+
+    // Equalise *optical area* across logos of different aspect ratios.
+    // Capping every logo at the same height makes wide wordmarks look far
+    // bigger than square marks. For equal rendered area, height scales with
+    // 1/sqrt(aspect), so wider logos get a shorter cap. Pick a bucket by the
+    // source aspect ratio (width / height):
+    //   .logo--square  aspect <= ~1.55  (near-square marks)
+    //   .logo--medium  aspect ~1.55-2.2
+    //   .logo--wide    aspect >= ~2.2    (wide banners / wordmarks)
+    .logos img.logo--square { max-height: 9ch; }
+    .logos img.logo--medium { max-height: 8.3ch; }
+    .logos img.logo--wide   { max-height: 6.1ch; }
     
     @media (min-width: 700px) {
         .logos {        
