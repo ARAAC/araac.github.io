@@ -1,0 +1,21 @@
+<a name="news"></a>
+<h4 class="section-split">Latest News</h4>
+<div class="news">
+    {% comment %} site.posts is already sorted newest-first {% endcomment %}
+    {% for item in site.posts limit: 5 %}
+        <article class="news-item">
+            <p class="news-date"><time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%-d %B %Y" }}</time></p>
+            <h2>
+                {% if item.link %}
+                    <a href="{{ item.link }}">{{ item.title }}</a>
+                {% else %}
+                    <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                {% endif %}
+            </h2>
+            {% if item.short %}<p class="news-desc">{{ item.short | markdownify }}</p>{% endif %}
+            {% unless item.link %}
+                <p class="news-link"><a href="{{ item.url | relative_url }}">Read more<span aria-hidden="true"> &rarr;</span></a></p>
+            {% endunless %}
+        </article>
+    {% endfor %}
+</div>

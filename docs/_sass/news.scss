@@ -1,0 +1,127 @@
+/* Front-page Latest News list */
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    .news-item {
+        h2 {
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .news-desc {
+            margin-bottom: 0.75rem;
+        }
+
+        .news-link {
+            margin-bottom: 0;
+
+            a {
+                text-decoration: none;
+                font-weight: 600;
+
+                span {
+                    display: inline-block;
+                    transition: transform 0.2s ease;
+                }
+
+                &:hover span {
+                    transform: translateX(3px);
+                }
+            }
+        }
+    }
+}
+
+.news-date {
+    margin: 0 0 0.25rem;
+    font-size: 0.9rem;
+    color: var(--text-color-softer);
+}
+
+/* News detail page */
+.news-full {
+    /* centred in main's content column (text still left-aligned), matching the
+       project intro and publications list; auto side-margins also avoid
+       stacking with main's gutter padding */
+    margin: 2rem auto;
+
+    h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+
+        @media (min-width: 1000px) {
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+    }
+
+    max-width: 60rem;
+}
+
+/* "ARAAC members in this story" links at the foot of a news detail page */
+.news-members {
+    max-width: 60rem;
+    margin: 3rem auto 2rem;
+
+    h2 {
+        font-size: 1.5rem;
+        color: var(--text-color-softer);
+        border-bottom: 1px solid var(--text-color-softer);
+        padding-bottom: 0.25rem;
+        margin: 0 0 1.25rem;
+    }
+}
+
+/* Compact researcher cards (photo + name + affiliation) */
+.researcher-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+}
+
+.researcher-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+
+    .researcher-card-photo {
+        width: 3.5rem;
+        height: 3.5rem;
+        object-fit: cover;
+        flex-shrink: 0;
+        border: 1px solid var(--accent-color);
+        border-radius: 3px;
+    }
+
+    .researcher-card-info {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+    }
+
+    .researcher-card-name {
+        font-weight: 600;
+    }
+
+    .researcher-card-org {
+        font-size: 0.9rem;
+        color: var(--text-color-softer);
+    }
+
+    &:hover .researcher-card-name {
+        text-decoration: underline;
+    }
+}

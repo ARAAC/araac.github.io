@@ -1,6 +1,8 @@
 .publications {
     list-style: none;
-    margin: 0;
+    /* keep the auto side-margins from the `main` content column so the list
+       sits centred (text still left-aligned) like the intro copy */
+    margin: 0 auto;
     padding: 0;
 }
 

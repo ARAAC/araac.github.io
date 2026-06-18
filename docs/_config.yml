@@ -23,6 +23,10 @@ collections:
   projects:
     output: true
 
+# News uses Jekyll's built-in `posts` collection (_posts/YYYY-MM-DD-slug.md):
+# the date is parsed from the filename, so it lives in exactly one place. See
+# the `type: posts` defaults below for layout/permalink.
+
 defaults:
   - scope:
       path: ""
@@ -42,3 +46,10 @@ defaults:
       layout: project
       seo:
         type: WebPage # see above — the ResearchProject entity is hand-rolled in the layout
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      seo:
+        type: WebPage # see above — the NewsArticle entity is hand-rolled in the layout

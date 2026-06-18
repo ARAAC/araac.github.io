@@ -5,7 +5,7 @@ layout: framework
 <div class="scroll-box hero-box-hands">
 <p class="back"><a href="{{ "/" | relative_url }}#researchers">All researchers</a></p>
 </div>
-<div class="researcher-full">
+<main class="researcher-full">
     {% assign name = page.url | split: "/" | last | split: "." | first %}
     {% assign img = "/assets/photos/" | append:name | append: ".webp" %}
     <div class="researcher-media">
@@ -23,7 +23,7 @@ layout: framework
         </p>
         {% include publications.html author=page.slug %}
     </div>
-</div>
+</main>
 {%- capture links_csv -%}{% if page.profile %}{{ page.profile }}{% endif %}{% if page.personal %}{% if page.profile %},{% endif %}{{ page.personal }}{% endif %}{%- endcapture -%}
 {%- assign person_links = links_csv | split: ',' -%}
 <script type="application/ld+json">

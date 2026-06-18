@@ -1,0 +1,19 @@
+{%- comment -%}
+Compact researcher card: photo, name (the `title` field) and affiliation (`org`),
+linking to the profile page. Photo basename is derived from the markdown
+filename, the same as researcher_list.html / researcher.html.
+
+Use like:
+    {% assign r = site.researchers | first %}
+    {% include researcher_card.html researcher=r %}
+{%- endcomment -%}
+{%- assign r = include.researcher -%}
+{%- assign name = r.path | split: "/" | last | split: "." | first -%}
+{%- assign img = "/assets/photos/" | append: name | append: ".webp" -%}
+<a class="researcher-card" href="{{ r.url | relative_url }}">
+    <img class="researcher-card-photo" src="{{ img | relative_url }}" alt="{{ r.title }}" loading="lazy">
+    <span class="researcher-card-info">
+        <span class="researcher-card-name">{{ r.title }}</span>
+        <span class="researcher-card-org">{{ r.org }}</span>
+    </span>
+</a>

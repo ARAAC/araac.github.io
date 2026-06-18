@@ -74,6 +74,8 @@ html {
 html {
     font-size: var(--base-font-size);
     scroll-behavior: smooth;
+    /* clear the sticky .site-nav when jumping to in-page anchors */
+    scroll-padding-top: 4rem;
 }
 
 body {

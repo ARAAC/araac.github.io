@@ -1,0 +1,53 @@
+---
+layout: framework
+---
+<div class="scroll-box hero-box-hands">
+<p class="back"><a href="{{ "/" | relative_url }}#news">All news</a></p>
+</div>
+<main>
+    <article class="news-full">
+        <p class="news-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
+        <h1>{{ page.title }}</h1>
+
+        {{ content }}
+    </article>
+
+    {%- comment -%}
+      Link to the profiles of any ARAAC members in this story: a member is
+      included if their full name (the researcher's `title`) appears in the body,
+      or if their filename slug is listed in the optional `members` front matter
+      (use that for mentions that don't spell out the full name). One pass over
+      the collection means each member appears at most once.
+    {%- endcomment -%}
+    {%- capture member_cards -%}
+    {%- assign ordered_researchers = site.researchers | sort: "order" -%}
+    {%- for r in ordered_researchers -%}
+        {%- assign slug = r.path | split: "/" | last | split: "." | first -%}
+        {%- if content contains r.title or page.members contains slug -%}
+            {% include researcher_card.html researcher=r %}
+        {%- endif -%}
+    {%- endfor -%}
+    {%- endcapture -%}
+    {%- assign member_cards = member_cards | strip -%}
+    {% if member_cards != "" %}
+    <aside class="news-members">
+        <h2>ARAAC members in this story</h2>
+        <div class="researcher-cards">{{ member_cards }}</div>
+    </aside>
+    {% endif %}
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "@id": {{ page.url | absolute_url | append: '#article' | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+  "headline": {{ page.title | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  {% if page.short %}"description": {{ page.short | strip_newlines | strip | jsonify }},{% endif %}
+  "publisher": { "@id": {{ '/' | absolute_url | append: '#organization' | jsonify }} },
+  "author": { "@id": {{ '/' | absolute_url | append: '#organization' | jsonify }} }
+}
+</script>
